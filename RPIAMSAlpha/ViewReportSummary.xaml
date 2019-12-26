@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.ViewReportSummary">
+    <ContentPage.Content>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="20">
+                <!--<SearchBar TextChanged="SearchBar_TextChanged"></SearchBar>-->
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Name" WidthRequest="100" HorizontalOptions="Start" />
+            <Label x:Name="Mei" Text="Code"  HorizontalOptions="CenterAndExpand" />
+            </StackLayout>-->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="5">
+                    <Label FontSize="Small" Text="Summary Report from  "/>
+                    <Label FontSize="Small" FontAttributes="Bold" x:Name="lblSdt"/>
+                    <Label FontSize="Small" Text=" to "/>
+                    <Label FontSize="Small" FontAttributes="Bold" x:Name="lblEdt"/>
+                </StackLayout>
+                    <Grid Grid.RowSpan="75" Grid.ColumnSpan="600" HeightRequest="100" >
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Name" Grid.Column="0"  />
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="TIME IN LATE"  Grid.Column="1"   />
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="TIME OUT UNDER"  Grid.Column="2"   />
+                    <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="PM IN LATE" Grid.Column="3"  />-->
+                    <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="PM OUT UNDER"  Grid.Column="4"  />-->
+                    </Grid>
+            <ScrollView>
+                <ListView x:Name="listView" IsPullToRefreshEnabled="True" HasUnevenRows="False" RowHeight="75" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView Padding="5" >
+                                    <Frame OutlineColor="Accent"
+                               Padding="10">
+                                                <Grid Grid.RowSpan="75" Grid.ColumnSpan="600" >
+                                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding EmpName}"  Grid.Column="0"  />
+                                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding TIAMLate}"  Grid.Column="1" />
+                                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding TOAMUnderTime}"  Grid.Column="2" />
+                                            <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding TIPMLate}" Grid.Column="3" BackgroundColor="ForestGreen"  />-->
+                                            <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  Text="{Binding TOPMUnderTime}"  Grid.Column="4" BackgroundColor="DarkSlateBlue" />-->
+                                                </Grid>
+                                    </Frame>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+        </ScrollView>
+        <Button x:Name="btnExporttoMSSQL" Text="Export to MSSQL" Clicked="BtnExporttoMSSQL_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <!--<Button x:Name="btnExporttoExcel" Text="Export to Excel" Clicked="BtnExporttoMSSQL_Clicked" IsEnabled="False" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <Button x:Name="btnExporttoWeb" Text="Export to Online" Clicked="BtnExporttoMSSQL_Clicked" IsEnabled="False" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>-->
+                <Button x:Name="btnReturn" Text="Return" Clicked="BtnReturn_Clicked"  BackgroundColor="FloralWhite" BorderColor="ForestGreen"/>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

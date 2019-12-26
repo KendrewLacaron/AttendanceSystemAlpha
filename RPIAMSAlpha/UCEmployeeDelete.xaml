@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.UCEmployeeDelete">
+    <ContentPage.Content>
+         <StackLayout>
+             <StackLayout Orientation="Vertical" Padding="10" >
+                <Image x:Name="empAvat" Source="{Binding empAvat}" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                <Label x:Name="txtEmpCode"   Text="{Binding EmpCode}" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Vertical" Padding="10">
+                <Label x:Name="txtEmpName" Text="{Binding EmpName}" HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="txtActive" IsVisible="False" Text="{Binding Active}" BackgroundColor="Aqua" Placeholder="Employee Active Goes Here"  HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <Button HorizontalOptions="CenterAndExpand" Clicked="btnDelete_Clicked" Text="Remove" BackgroundColor="FloralWhite" BorderColor="DeepPink"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RPIAMSAlpha"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             SizeChanged="MainPageSizeChanged"
+             x:Class="RPIAMSAlpha.MainPage">
+
+    <ContentPage.ToolbarItems>
+      
+        <ToolbarItem x:Name="btnLog" Text="Log" Icon="Avatars/log.png" >
+        </ToolbarItem>
+        <!--<ToolbarItem x:Name="btnRefresh" Text="Refresh" Icon="Avatars/girl.png" >
+        </ToolbarItem>-->
+        <ToolbarItem x:Name="btnExportLog" Text="Export Log" Icon="Avatars/categorycolored.png"  >
+        </ToolbarItem>
+        <ToolbarItem x:Name="btnConfig" Text="Config" Icon="Avatars/coolsettings.png" >
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            
+            <StackLayout x:Name="stackLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <skia:SKCanvasView x:Name="canvasView"
+                       PaintSurface="canvasView_PaintSurface" 
+                                   HeightRequest="200" WidthRequest="350"/>
+
+
+                <StackLayout x:Name="stackBG" Spacing="0" Padding="0" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                    
+                <StackLayout Orientation="Vertical" Padding="10" Spacing="10" >
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                            <Label x:Name="lblTime"  FontSize="Medium" TextColor="Black"  HorizontalOptions="StartAndExpand" VerticalOptions="Center"  FontAttributes="Bold" />
+                            <Label x:Name="lblDevType" Text="Need Setup" FontSize="Large" FontAttributes="Bold" TextColor="BlueViolet" />
+                            <Label x:Name="lblDate" FontSize="Medium" TextColor="Black"  HorizontalOptions="EndAndExpand" VerticalOptions="Center"  FontAttributes="Bold" />
+                        </StackLayout>
+                        <Entry x:Name="txtSwipeCard" HorizontalTextAlignment="Start" FontSize="Large" HeightRequest="50" MaxLength="10" VerticalOptions="Start" WidthRequest="300" HorizontalOptions="CenterAndExpand" TextChanged="OnScan_Swipe"/>
+                        <Label x:Name="lblMsg" FontSize="Large"  FontAttributes="Italic" TextColor="Green" HorizontalOptions="CenterAndExpand"/>
+                        <Frame OutlineColor="MediumVioletRed" CornerRadius="5" HasShadow="True" Margin="10" >
+                            <StackLayout Orientation="Vertical" Margin="10" VerticalOptions="CenterAndExpand">
+                            <StackLayout Margin="15" HorizontalOptions="CenterAndExpand">
+                                <Image x:Name="empmAvat" Source="" HeightRequest="100" WidthRequest="100" />
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="txtEmpName" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label x:Name="txtLogTime" FontSize="Large"  HorizontalOptions="Center"/>
+                                <Label x:Name="txtLogTimeLabel" FontSize="Large" FontAttributes="Bold" TextColor="LightSeaGreen"  HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                        </Frame>
+                    
+
+                        <!--<Frame OutlineColor="RosyBrown" HasShadow="True" CornerRadius="2" Margin="10" >
+                            <StackLayout Orientation="Vertical" Margin="10">
+                                <Label Text="Statistics" TextColor="Red" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Entry Type : " FontAttributes="Bold" HorizontalOptions="Start"/>
+                                        <Label x:Name="txtLogTimeLabelStat"  HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Req Time   : " FontAttributes="Bold"  HorizontalOptions="Start"/>
+                                        <Label x:Name="txtAcctLogTimeStat"  HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Inp Time    : " FontAttributes="Bold"  HorizontalOptions="Start"/>
+                                        <Label x:Name="txtLogTimeStat"  HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <Label Text="Difference : " TextColor="LawnGreen"  HorizontalOptions="Center"/>
+                                        <Label x:Name="txtDifference" TextColor="DarkGreen"  HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    </StackLayout>
+                            </StackLayout>
+                        </Frame>-->
+
+
+                        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="5">
+                        --><!--<Button x:Name="btnTIAM" BackgroundColor="FloralWhite" BorderColor="Red" WidthRequest="100" BorderWidth=".5"  Text="In AM" />
+                            <Button x:Name="btnTOAM" BackgroundColor="FloralWhite" BorderColor="Orange" WidthRequest="100" BorderWidth=".5" Text="Out PM"/>
+                            <Button x:Name="btnTIPM" BackgroundColor="FloralWhite" BorderColor="Yellow" WidthRequest="100" BorderWidth=".5" Text="In PM" />
+                            <Button x:Name="btnTOPM" BackgroundColor="FloralWhite" BorderColor="Green" WidthRequest="100" BorderWidth=".5" Text="Out PM"/>-->
+                            <!--<Label x:Name="lblDevType" Text="SETUP DEVICE FIRST" VerticalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold" TextColor="Black" />--><!--
+
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="End" VerticalOptions="End" Orientation="Horizontal" Padding="5">
+                            
+                    --><!--<Button x:Name="btnReset" BackgroundColor="FloralWhite" BorderColor="Blue" BorderWidth=".5" Text="Clear"  HorizontalOptions="End"/>-->
+                    <!--<Button x:Name="btnConfig" BackgroundColor="FloralWhite" BorderColor="Indigo" BorderWidth=".5" Text="Config"  HorizontalOptions="End"/>
+                    <Button x:Name="btnLog" BackgroundColor="FloralWhite" BorderColor="Violet" BorderWidth=".5"  Text="Log"  HorizontalOptions="End" />--><!--
+                        </StackLayout>-->
+
+                    </StackLayout>
+
+            </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.UserConfigAccess">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="10" Spacing="10">
+            <Label HorizontalOptions="CenterAndExpand" Text="Login" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtUser"  HorizontalOptions="CenterAndExpand" WidthRequest="250" Placeholder="Username Here!" />
+            <Entry x:Name="txtPass" HorizontalOptions="CenterAndExpand" WidthRequest="250" Placeholder="Password Here!" IsPassword="True"/>
+            <Button x:Name="btnSubmit" HorizontalOptions="CenterAndExpand" WidthRequest="150" Text="Submit" Clicked="BtnSubmit_Clicked" BackgroundColor="FloralWhite" BorderColor="Red" BorderWidth=".5" />
+            <Button x:Name="btnChangePass" HorizontalOptions="CenterAndExpand" Text="Change Password" WidthRequest="150" BackgroundColor="FloralWhite" BorderColor="Orange" BorderWidth=".5" Clicked="BtnChangePass_Clicked" />
+            <Button x:Name="btnAddUser" HorizontalOptions="CenterAndExpand" Text="Return to Main" WidthRequest="150" BackgroundColor="FloralWhite" BorderColor="Yellow" BorderWidth=".5"  Clicked="BtnAddUser_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

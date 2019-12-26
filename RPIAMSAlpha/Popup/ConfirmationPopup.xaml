@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 CloseWhenBackgroundIsClicked="True"
+             x:Class="RPIAMSAlpha.Popup.ConfirmationPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+                      PositionIn="Center"  
+                      PositionOut="Center"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="300"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"  
+      HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Frame HasShadow="True" BorderColor="WhiteSmoke" Margin="5" CornerRadius="10">
+            <StackLayout BackgroundColor="White" VerticalOptions="Center" Orientation="Vertical" HorizontalOptions="Center"  Padding="5">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="To confirm the deletion of records please input "/>
+                    <Label FontAttributes="Bold" x:Name="lblConfirmText"/>
+                </StackLayout>
+                <Entry x:Name="txtConfirmDelete" TextChanged="TxtConfirmDelete_TextChanged"/>
+                <Button x:Name="btnConfirmDelete" IsEnabled="False" BorderWidth="1" BorderColor="Accent" BackgroundColor="White" HorizontalOptions="Center" Text="Confirm" Clicked="BtnConfirmDelete_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.UCEmployeeDeleteList">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+        <SearchBar TextChanged="SearchBar_TextChanged"></SearchBar>
+        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Name" WidthRequest="100" HorizontalOptions="Start" />
+            <Label x:Name="Mei" Text="Code"  HorizontalOptions="CenterAndExpand" />
+            </StackLayout>-->
+        <ListView x:Name="listView" ItemSelected="OnListItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="5">
+                            <Frame OutlineColor="Accent"
+                               Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding empAvat}" 
+                                           WidthRequest="50"
+                                           HeightRequest="50"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding EmpName}"  HorizontalOptions="StartAndExpand" />
+                                        <Label Text="{Binding EmpRFID}"  HorizontalOptions="StartAndExpand" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

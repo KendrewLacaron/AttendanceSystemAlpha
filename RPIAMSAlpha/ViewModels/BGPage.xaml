@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.ViewModels.BGPage">
+
+    <StackLayout HorizontalOptions="Fill"
+                 VerticalOptions="Fill">
+
+
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+
+            <Label Text="I was born in the:"
+                   FontSize="Large"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="{Binding Season}"
+                   FontSize="Large"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Winter"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="White"
+                    Command="{Binding WinterSelected}"
+                    HorizontalOptions="Fill" />
+
+            <Button Text="Spring"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="White"
+                    Command="{Binding SpringSelected}"
+                    HorizontalOptions="Fill" />
+
+            <Button Text="Summer"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="White"
+                    Command="{Binding SummerSelected}"
+                    HorizontalOptions="Fill" />
+
+            <Button Text="Autumn"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="White"
+                    Command="{Binding AutumnSelected}"
+                    HorizontalOptions="Fill" />
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

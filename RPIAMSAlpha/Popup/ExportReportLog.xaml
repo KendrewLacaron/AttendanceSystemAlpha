@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             CloseWhenBackgroundIsClicked="True"
+             x:Class="RPIAMSAlpha.Popup.ExportReportLog">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation   
+                      PositionIn="Center"  
+                      PositionOut="Center"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="300"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"  
+      HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+    <Frame HasShadow="True" Margin="50" CornerRadius="10" BackgroundColor="White" >
+        <StackLayout BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" >
+            <ScrollView>
+                <ListView x:Name="expLogList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView Padding="5">
+                                    <Frame OutlineColor="#3F51B5" HasShadow="True"
+                               Padding="10" BackgroundColor="White">
+                                        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                                            <StackLayout BackgroundColor="Transparent">
+                                                <Label x:Name="lblLogDesc" TextColor="Black" VerticalTextAlignment="Center" Text="{Binding StatusInfo}"  HorizontalOptions="StartAndExpand" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

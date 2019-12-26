@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.EntryLog">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back" Clicked="ToolbarItem_Clicked" Icon="Avatars/girl.png">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="Entry Log" TextColor="Green" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" />
+            
+            <ListView x:Name="listView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView Padding="5">
+                                <Frame OutlineColor="Accent"
+                               Padding="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding empAvat}" 
+                                           WidthRequest="50"
+                                           HeightRequest="50"/>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label Text="{Binding EmpName}"  HorizontalOptions="StartAndExpand" />
+                                            <Label TextColor="LightSeaGreen" FontAttributes="Bold" Text="{Binding TimeLog}"  HorizontalOptions="StartAndExpand" />
+                                        </StackLayout>
+                                        <Label Text="{Binding LogTypeInfo}" HorizontalOptions="EndAndExpand" TextColor="Green" FontAttributes="Italic" />
+                                    </StackLayout>
+                                </Frame>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

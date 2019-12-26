@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{DF2202DB-94DC-4B23-AAE5-6ECC0553AC35}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>RPIAMSAlpha</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ConfigTab.xaml.cs">
+      <DependentUpon>ConfigTab.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Database\EmployeeDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DevicePref.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DeviceStatusReport.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\InOutOnly.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\IPConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TblMain1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TimeLogs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntryLog.xaml.cs">
+      <DependentUpon>EntryLog.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\ConfirmDeleteEnums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\ExportReportEnums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EPPlus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PasswordChange.xaml.cs">
+      <DependentUpon>PasswordChange.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Popup\ConfirmationPopup.xaml.cs">
+      <DependentUpon>ConfirmationPopup.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Popup\DateTimeSetterPopup.xaml.cs">
+      <DependentUpon>DateTimeSetterPopup.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Popup\ExportReportLog.xaml.cs">
+      <DependentUpon>ExportReportLog.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Popup\LoadingPopup.xaml.cs">
+      <DependentUpon>LoadingPopup.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Popup\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UCEmployeeAdd.xaml.cs">
+      <DependentUpon>UCEmployeeAdd.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UCEmployeeDelete.xaml.cs">
+      <DependentUpon>UCEmployeeDelete.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UCEmployeeDeleteList.xaml.cs">
+      <DependentUpon>UCEmployeeDeleteList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UCEmployeeEdit.xaml.cs">
+      <DependentUpon>UCEmployeeEdit.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserConfigAccess.xaml.cs">
+      <DependentUpon>UserConfigAccess.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewImportedEmployee.xaml.cs">
+      <DependentUpon>ViewImportedEmployee.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BGPage.xaml.cs">
+      <DependentUpon>BGPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SecondPagViewModel.xaml.cs">
+      <DependentUpon>SecondPagViewModel.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewReport.xaml.cs">
+      <DependentUpon>ViewReport.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewReportRegardless.xaml.cs">
+      <DependentUpon>ViewReportRegardless.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewReportSummary.xaml.cs">
+      <DependentUpon>ViewReportSummary.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DetailedReportView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EntryLogData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GetAllDataForRep.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SQLEmployeeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SummaryReportView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TempEmployee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TimeLogStringFormatView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UCEmployeeAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ConfigTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UCEmployeeEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UCEmployeeDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UCEmployeeDeleteList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\boy1.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\boy.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\categorycolored.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\coolsettings.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\girl1.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\girl.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\log.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\man1.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\man2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\man3.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\man5.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Avatars\man.png" />
+    <Content Include="$(MSBuildThisFileDirectory)New Text Document.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)WoodGrain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)EntryLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewModels\SecondPagViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewModels\BGPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserConfigAccess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PasswordChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewReportSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewImportedEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Popup\LoadingPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Popup\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Popup\DateTimeSetterPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Popup\ExportReportLog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Popup\ConfirmationPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewReportRegardless.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

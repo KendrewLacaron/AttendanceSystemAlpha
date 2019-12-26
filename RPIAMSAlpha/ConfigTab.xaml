@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages ="clr-namespace:RPIAMSAlpha"
+             x:Class="RPIAMSAlpha.ConfigTab">
+  
+  <!--Pages can be added as references or inline-->
+    
+    <!--<pages:UCEmployeeAdd Title="Add" Icon="Avatars/man.png" IsVisible="False"/>
+    <pages:UCEmployeeEdit Title="Edit" Icon="Avatars/man1.png" IsVisible="False"/>
+    <pages:UCEmployeeDeleteList Title="Delete" Icon="Avatars/girl1.png" IsVisible="False"/>-->
+
+    <ContentPage Title="Export">
+        <ContentPage.Content>
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="btnExport" Text="View Reports" Clicked="BtnExport_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <Button x:Name="btnTally" Text="Tally Exports" Clicked="BtnTally_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <Button x:Name="btnDetailed" Text="Detailed" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="2" HorizontalOptions="CenterAndExpand"/>
+                    <Button x:Name="btnSummary" Text="Summary" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="2" HorizontalOptions="CenterAndExpand"/>
+                    <Button x:Name="btnExportRegard" Text="Root" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="2" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Label Text="Beginning Date" HorizontalOptions="CenterAndExpand"/>
+                <DatePicker x:Name="dtSdt" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Ending Date" HorizontalOptions="CenterAndExpand"/>
+                <DatePicker x:Name="dtEdt" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Import">
+        <ContentPage.Content>
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="btnImport" Text="View Import" Clicked="BtnImport_Clicked"  BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <StackLayout Orientation="Horizontal" Padding="5">
+                    <Button x:Name="btnEmpType" Text="Employee" Clicked="BtnEmpType_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="1.5" HorizontalOptions="CenterAndExpand"/>
+                    <!--<Button x:Name="btnSummary" Text="Summary" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="2" HorizontalOptions="CenterAndExpand"/>-->
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    
+    <ContentPage Title="Operations">
+        <StackLayout Orientation="Vertical" Margin="10" Padding="10">
+            <Frame HasShadow="True" Padding="20" BorderColor="WhiteSmoke" CornerRadius="2">
+                <StackLayout Orientation="Vertical" Spacing="20" >
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                            <Label Text="Type of Device :" FontAttributes="Bold"  TextColor="MediumVioletRed"  />
+                        <Button x:Name="btnTIN" Clicked="BtnTIN_Clicked" Text="Time-in" BorderWidth="1" BorderColor="Accent" BackgroundColor="White"  HorizontalOptions="FillAndExpand"/>
+                        <Button x:Name="btnOUT" Clicked="BtnOUT_Clicked" Text="Time-out" BorderWidth="1" BorderColor="Accent" BackgroundColor="White" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="50" >
+                        <Label Text="Device Code :"  FontAttributes="Bold"  TextColor="MediumVioletRed"/>
+                        <Entry x:Name="txtDevCode" Placeholder="Enter Device Code" HorizontalTextAlignment="Center"  HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                        <Label Text="Auto Export Time :" FontAttributes="Bold"  TextColor="MediumVioletRed" />
+                        <TimePicker x:Name="pickExpTime" />
+                    </StackLayout>
+                    <Button x:Name="btnSave" Text="Save Configuration" Clicked="BtnSave_Clicked" BorderWidth="1" BorderColor="Accent" BackgroundColor="White"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="10">
+                <Button x:Name="btnBack" Text="Return to Main" Clicked="BtnBack_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <Button x:Name="btnQuit" Text="Close Application" Clicked="BtnQuit_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+                <Button x:Name="btnShutdown" Text="Shutdown Device" Clicked="BtnShutdown_Clicked" BackgroundColor="FloralWhite" BorderColor="DeepPink"/>
+            </StackLayout>
+        </StackLayout>
+   
+  </ContentPage>
+    <ContentPage Title="Connections">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Frame HasShadow="True" BorderColor="WhiteSmoke" Margin="5" CornerRadius="10">
+                <StackLayout BackgroundColor="White" VerticalOptions="Center" Orientation="Vertical" HorizontalOptions="Center"  Padding="5">
+                    <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand" RowSpacing="1" ColumnSpacing="4" BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Text="IP Address :" FontSize="Medium" FontAttributes="Italic" TextColor="Accent"/>
+                        <Entry Grid.Column="0" Grid.Row="1" x:Name="txtIP" Text="{Binding ConfigIP}" IsEnabled="True" FontAttributes="Bold" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+
+                        <Label Grid.Column="1" Grid.Row="0" Text="Port:" FontSize="Medium" FontAttributes="Italic" TextColor="Accent"/>
+                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txtPort" Keyboard="Numeric" Text="{Binding ConfigPort}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" Spacing="5" Padding="5">
+                        <Button x:Name="btnSaveIP" Text="Save" Grid.Column="0" Grid.Row="2" Clicked="BtnSaveIP_Clicked"  HorizontalOptions="CenterAndExpand" TextColor="Black" BorderWidth="1" BorderColor="Accent" BackgroundColor="White"/>
+                        <!--<Button x:Name="btnImport1" Text="Import" Grid.Column="1" Grid.Row="2" Clicked="BtnImport_Clicked1"  HorizontalOptions="CenterAndExpand"  TextColor="Black"  BorderWidth="1" BorderColor="Accent" BackgroundColor="White" />-->
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Reset">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Frame HasShadow="True" BorderColor="WhiteSmoke" Margin="5" CornerRadius="10">
+                <Button x:Name="btnClearRecords" Clicked="BtnClearRecords_Clicked" Text="Clear Records"
+                        BackgroundColor="Red" TextColor="White"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

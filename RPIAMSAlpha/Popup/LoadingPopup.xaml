@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  x:Class="RPIAMSAlpha.Popup.LoadingPopup"
+             CloseWhenBackgroundIsClicked="False">
+    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+        <Frame HasShadow="True" BackgroundColor="White">
+        <AbsoluteLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+            <ActivityIndicator
+    Color="Green"
+    IsRunning="True"
+    IsEnabled="True"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+                Opacity="50"
+    HeightRequest="70"
+    WidthRequest="70"/>
+            <!--<ActivityIndicator
+    Color="Red"
+    IsRunning="True"
+    IsEnabled="True"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    HeightRequest="70"
+                Opacity="50"
+    WidthRequest="70" Rotation="180"/>-->
+        </AbsoluteLayout>
+        </Frame>
+        <!--<Label x:Name="txtLoadStatus" HorizontalOptions="CenterAndExpand" FontSize="Caption" TextColor="Blue"/>-->
+        <!--<Label x:Name="txtAdditionalStatus" HorizontalOptions="CenterAndExpand" FontSize="Caption" TextColor="Yellow"/>-->
+    </StackLayout>
+</pages:PopupPage>

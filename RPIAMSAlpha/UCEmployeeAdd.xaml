@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPIAMSAlpha.UCEmployeeAdd"
+             SizeChanged="ContentPage_SizeChanged"
+             >
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="10" HorizontalOptions="FillAndExpand">
+                <StackLayout Spacing="10" Orientation="Vertical" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                    <Button HorizontalOptions="Center" Clicked="btnTest"  Text="Change Avatar" BackgroundColor="FloralWhite" BorderColor="DeepPink" BorderWidth="3" BorderRadius="10"></Button>
+                    <Image x:Name="empAvat"  Source="Avatars/boy.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                    <Entry x:Name="txtEmpCode" WidthRequest="300" Keyboard="Numeric"  MaxLength="10" Text="{Binding EmpCode}" Placeholder="Employee Code Goes Here" HorizontalOptions="CenterAndExpand" />
+                    <Entry x:Name="txtEmpName" WidthRequest="300" Text="{Binding EmpName}"  Placeholder="Employee Name Goes Here" HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="txtActive" IsVisible="False" Text="{Binding Active}"/>
+                    <Label x:Name="empID" IsVisible="False" Text="{Binding EmpID}"  />
+                </StackLayout>
+                <StackLayout x:Name="stackLayout"  Orientation="Vertical" VerticalOptions="CenterAndExpand"  >
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand"  >
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="lblTIAM" Text="TIME - IN" TextColor="Black"  HorizontalOptions="CenterAndExpand"/>
+                            <TimePicker x:Name="cboTIAM" Time="{Binding EmpTIAM}" HorizontalOptions="StartAndExpand"  />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="lblTOAM" Text="TIME - OUT" TextColor="Black"  HorizontalOptions="StartAndExpand"/>
+                            <TimePicker x:Name="cboTOAM" Time="{Binding EmpTOAM}" HorizontalOptions="StartAndExpand"  />
+                        </StackLayout>
+                          </StackLayout>
+                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="lblTIPM" Text="Time-In PM:" TextColor="Black"  HorizontalOptions="StartAndExpand"/>
+                            <TimePicker x:Name="cboTIPM" Time="{Binding EmpTIPM}" HorizontalOptions="StartAndExpand"  />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="lblTOPM" Text="Time-Out PM:" TextColor="Black"  HorizontalOptions="StartAndExpand"/>
+                            <TimePicker x:Name="cboTOAPM" Time="{Binding EmpTOPM}" HorizontalOptions="StartAndExpand"  />
+                        </StackLayout>
+                          </StackLayout>-->
+
+                </StackLayout>
+                <StackLayout  VerticalOptions="End">
+                    <Button  Clicked="btnSave_Click" Text="Save" BackgroundColor="FloralWhite" BorderColor="DeepPink"></Button>
+                </StackLayout>
+                <!--<Image x:Name="imgFinger" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100" Source="{ Binding EmpFinger }"/>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,88 @@
+                ////StorageFolder devices = Windows.Storage.KnownFolders.RemovableDevices;
+                ////StorageFolder sdCard = (await devices.GetFoldersAsync()).FirstOrDefault();
+
+                ////StorageFolder externalDevices = KnownFolders.RemovableDevices;
+                ////IReadOnlyList<StorageFolder> externalDrives = await externalDevices.GetFoldersAsync();
+                ////StorageFolder x = externalDrives[0];
+
+                //////var folderPicker = new Windows.Storage.Pickers.FolderPicker();
+                //////folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Objects3D;
+                //////folderPicker.FileTypeFilter.Add("*");
+
+                ////byte[] bin = pck.GetAsByteArray();
+
+                ////Windows.Storage.AccessCache.StorageApplicationPermissions.
+                ////    FutureAccessList.AddOrReplace("PickedFolderToken", sdCard);
+
+                //////Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+                //////if (folder != null)
+                //////{
+                //////    // Application now has read/write access to all contents in the picked folder
+                //////    // (including other sub-folder contents)
+                //////    Windows.Storage.AccessCache.StorageApplicationPermissions.
+                //////    FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+
+                //////}
+                //////else
+                //////{
+
+                //////}
+
+                ////StorageFolder newFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("PickedFolderToken");
+                ////string we = Path.Combine(newFolder.Path, "Reports.xlsx");
+                ////await DisplayAlert("Baka..", "Go Commit Soduko" + we, "Wakarimashta");
+                //////pck.SaveAs(new FileInfo(we + "Reports.xlsx"));
+
+                ////string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+                //////string filename = Path.Combine(sdCard.path, "myfile.txt");
+                //////var stream = await sdCard.OpenStreamForWriteAsync();
+                ////await DisplayAlert("Baka..", "Go Commit Soduko " + filename + sdCard.Name , "Wakarimashta");
+                //////using (var streamWriter = new StreamWriter(await sdCard.OpenStreamForWriteAsync()))
+                //////{
+                //////    streamWriter.WriteLine(DateTime.UtcNow);
+                //////}
+
+                ////StorageFile newFile = await ApplicationData.Current.LocalFolder.CreateFileAsync("testfile3.txt");
+
+
+                ////using (StreamWriter writer = new StreamWriter(await newFile.OpenStreamForWriteAsync()))
+                ////{
+                ////    await writer.WriteLineAsync("new entry");
+                ////    await writer.WriteLineAsync(lblEdt.Text);
+                ////}
+
+                ////try
+                ////{
+                ////    //File.WriteAllBytes(we, bin);
+                ////}
+                ////catch (Exception ex)
+                ////{
+                ////    //System.IO.FileAttributes attributes = File.GetAttributes(newFolder.Path);
+                ////    //if ((attributes & System.IO.FileAttributes.ReadOnly) == System.IO.FileAttributes.ReadOnly)
+                ////    //{
+                ////    //    attributes &= ~System.IO.FileAttributes.ReadOnly;
+                ////    //    File.SetAttributes(newFolder.Path, attributes);
+                ////    //    File.WriteAllBytes(newFolder.Path, bin);
+                ////    //}
+                ////    //else
+                ////    //{
+                ////    //    throw;
+                ////    //}
+
+                ////    await DisplayAlert("Baka..", "Go Commit Soduko" + ex, "Wakarimashta");
+                ////}
+
+
+                //////if (x != null)
+                //////{
+                //////    pck.SaveAs(new FileInfo(x.Path+"Reports.xlsx"));
+                //////    //pck.SaveAs(new FileInfo(sdCard.Path + "Reports.xlsx"));
+                //////    await DisplayAlert("Yosh...", "Summary Report Exported", "Sure");
+                //////    await Navigation.PopToRootAsync();
+                //////}
+                //////else
+                //////{
+                //////    pck.SaveAs(new FileInfo("Reports.xlsx"));
+                //////    await DisplayAlert("Yosh...", "USB not found or recognized", "Sure");
+                //////}
